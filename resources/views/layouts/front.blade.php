@@ -3,7 +3,9 @@
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-
+<?php
+$gs = \App\GeneralSettings::find(1);
+?>
 <head>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -13,7 +15,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <title>Salon</title>
+    <title>{{$gs->sitename}}</title>
 
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 
@@ -30,7 +32,24 @@
     <link type="text/css" rel="stylesheet" href="{{asset('front/css/style.css')}}" />
 <!--[if lt IE 9]> <script type="text/javascript" src="{{asset('front/js/modernizr.custom.js')}}"></script> <![endif]-->
     <!-- /STYLES -->
+    <style>
 
+        body{
+            font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            letter-spacing: 0.5px;
+            font-weight: 400;
+            color: #999;
+
+            background-image:url({{asset($gs->mainimage)}});
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -50,7 +69,7 @@
                 <div class="vertical_menu">
                     <div class="makeup_fl_ver_menu_in">
                         <div class="makeup_fl_logo">
-                            <img src="{{asset('front/img/logo.png')}}" alt="" />
+                            <img src="{{asset($gs->logo)}}" alt="" />
                         </div>
                         <div class="makeup_fl_nav_list">
                             <ul>
@@ -69,11 +88,9 @@
                         </div>
                         <div class="makeup_fl_social_icons">
                             <ul>
-                                <li><a href="#"><i class="xcon-facebook"></i></a></li>
-                                <li><a href="#"><i class="xcon-twitter"></i></a></li>
-                                <li><a href="#"><i class="xcon-instagram"></i></a></li>
-                                <li><a href="#"><i class="xcon-pinterest"></i></a></li>
-                                <li><a href="#"><i class="xcon-gplus"></i></a></li>
+                                <li><a href="{{$gs->facebook}}"><i class="xcon-facebook"></i></a></li>
+                                <li><a href="{{$gs->twitter}}"><i class="xcon-twitter"></i></a></li>
+                                <li><a href="{{$gs->instagram}}"><i class="xcon-instagram"></i></a></li>
                             </ul>
                         </div>
                         <div class="makeup_fl_cright">
@@ -96,7 +113,7 @@
                     <!-- HEADER -->
                     <div class="makeup_fl_header">
                         <div class="makeup_fl_logo">
-                            <img src="{{asset('front/img/logo.png')}}" alt="" />
+                            <img src="{{asset($gs->logo)}}" alt="" />
                         </div>
                         <div class="makeup_fl_header_trigger">
                             <a href="#"></a>
@@ -138,11 +155,9 @@
                     <div class="makeup_fl_footer">
                         <div class="social_icons">
                             <ul>
-                                <li><a href="#"><i class="xcon-facebook"></i></a></li>
-                                <li><a href="#"><i class="xcon-twitter"></i></a></li>
-                                <li><a href="#"><i class="xcon-linkedin"></i></a></li>
-                                <li><a href="#"><i class="xcon-pinterest"></i></a></li>
-                                <li><a href="#"><i class="xcon-instagram"></i></a></li>
+                                <li><a href="{{$gs->facebook}}"><i class="xcon-facebook"></i></a></li>
+                                <li><a href="{{$gs->twitter}}"><i class="xcon-twitter"></i></a></li>
+                                <li><a href="{{$gs->instagram}}"><i class="xcon-instagram"></i></a></li>
                             </ul>
                         </div>
                         <div class="cright">

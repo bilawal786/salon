@@ -5,7 +5,7 @@
 /*	This file is made for CURRENT TEMPLATE
 /*
 	01) BASE
-	02) CONTENT 
+	02) CONTENT
 	03) VERTICAL MENU
 	04) CONTENT IN (INDEX)
 	05) HEADER (DEFAULT DISPLAY:NONE;)
@@ -25,7 +25,7 @@
 		13.5) BOOKING
 		13.6) OPENING TIME
 		13.7) TIME PICKER
-	
+
 	14) GALLERY (NEW PAGE)
 	15) MEDIA QUERIES (FOR SMALL DEVICES)
 
@@ -37,23 +37,8 @@ html {
 	padding: 0px;
 	margin: 0px
 }
-body{
-	font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
-	font-size: 14px;
-	line-height: 1.5;
-	letter-spacing: 0.5px;
-	font-weight: 400;
-	color: #999;
-	
-	background-image:url(../img/bg_img.jpg);
-	background-size:cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: fixed;
-}
-
 /*------------------------------------------------------------------*/
-/*	02) CONTENT 
+/*	02) CONTENT
 /*------------------------------------------------------------------*/
 .makeup_fl_wrapper_all{
 	width: 100%;
@@ -67,7 +52,7 @@ body{
 	float: left;
 	height: auto;
 	padding: 50px 0px;
-	
+
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
@@ -86,7 +71,7 @@ body{
 	height: auto;
 	padding: 10px;
 	background: rgba(0,0,0,0.8);
-	
+
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
@@ -97,11 +82,11 @@ body{
 	padding: 80px 50px 50px 50px;
 	overflow: hidden;
 	position: relative;
-	
+
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
-	
+
 	background-image: -webkit-linear-gradient( rgba(39,3,30,0.5) , rgba(0,0,0,0.5) ); /* For Safari 5.1 to 6.0 */
     background-image: -o-linear-gradient( rgba(39,3,30,0.5) , rgba(0,0,0,0.5) ); /* For Opera 11.1 to 12.0 */
     background-image: -moz-linear-gradient( rgba(39,3,30,0.5) , rgba(0,0,0,0.5) ); /* For Firefox 3.6 to 15 */
@@ -136,7 +121,7 @@ body{
 }
 .makeup_fl_ver_menu_in .makeup_fl_nav_list ul li a span{
 	position: relative;
-	
+
 	transition: all .3s ease;
 	-o-transition: all .3s ease;
 	-ms-transition: all .3s ease;
@@ -169,7 +154,7 @@ body{
 	z-index: 999;
 	margin-bottom: 90px;
 	padding: 0px 50px;
-	
+
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
@@ -215,7 +200,7 @@ body{
 	top:0px;
 	background: rgba(255,255,255,0.05);
 	z-index: 3;
-	
+
 	transition: all .5s ease;
 	-o-transition: all .5s ease;
 	-ms-transition: all .5s ease;
@@ -241,12 +226,12 @@ body{
 	background-color: #371352;
 	z-index: 2;
 	border:2px solid transparent;
-	
+
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
-	
-	
+
+
 	transition: all .5s ease;
 	-o-transition: all .5s ease;
 	-ms-transition: all .5s ease;
@@ -280,7 +265,7 @@ body{
 	display: inline-block;
 	margin: 0px 3px 10px 3px;
 	background-color: rgba(255,255,255,0.02);
-	
+
 	transition: all .5s ease;
 	-o-transition: all .5s ease;
 	-ms-transition: all .5s ease;
@@ -294,7 +279,7 @@ body{
 	line-height: 40px;
 	height: 40px;
 	text-align: center;
-	
+
 	transition: none;
 	-o-transition: none;
 	-ms-transition: none;
@@ -374,10 +359,10 @@ body{
 	background-color: rgba(0,0,0,0.9);
 	position: relative;
 	overflow: hidden;
-	
+
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-	box-sizing: border-box;         /* Opera/IE 8+ */	
+	box-sizing: border-box;         /* Opera/IE 8+ */
 }
 .lessmargin{
 	margin-top: 20px !important;
@@ -402,7 +387,7 @@ body{
 	height: 96px;
 }
 .fotorama__nav-wrap{
-	margin-top: -20px;	
+	margin-top: -20px;
 }
 .fotorama__thumb-border{
 	height: 64px !important;
@@ -423,7 +408,7 @@ body{
 	clear:both;
 	float:left;
 	padding:60px 65px;
-	
+
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
@@ -546,7 +531,7 @@ body{
 	float: left;
 	padding: 10px 30px;
 	z-index: 1;
-	
+
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
@@ -625,12 +610,12 @@ body{
 	padding: 10px 28px;
 	font-size: 12px;
 	display: inline-block;
-	background-color: #371352;	
+	background-color: #371352;
 	z-index: 3;
 	position: relative;
 	border: 2px solid transparent;
 }
-/*------------------------------------------------------------------*/ 
+/*------------------------------------------------------------------*/
 /*	05) HEADER (DEFAULT DISPLAY:NONE;)
 /*------------------------------------------------------------------*/
 .makeup_fl_header{
@@ -651,7 +636,7 @@ body{
 	margin-left: 30px;
 	position: relative;
 	padding: 8.5px 0px;
-	
+
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
@@ -662,10 +647,10 @@ body{
 	height: 1px;
 	background-color: #bbb;
 	display: block;
-	
+
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-	box-sizing: border-box;         /* Opera/IE 8+ */ 
+	box-sizing: border-box;         /* Opera/IE 8+ */
 }
 .makeup_fl_header_trigger span:last-child{
 	margin-bottom: 0px;
@@ -705,7 +690,7 @@ body{
 	top:0px;
 	background: #150f13;
 	height: 40px;
-	
+
 	transition: all .5s ease;
 	-o-transition: all .5s ease;
 	-ms-transition: all .5s ease;
@@ -728,11 +713,11 @@ body{
 	background-color: #371352;
 	border:2px solid transparent;
 	height: 40px;
-	
+
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
-	
+
 	transition: all .5s ease;
 	-o-transition: all .5s ease;
 	-ms-transition: all .5s ease;
@@ -782,7 +767,7 @@ body{
 	display: block;
 }
 .makeup_fl_header .makeup_fl_header_nav_list ul li > a:hover{
-	color: #999; 
+	color: #999;
 }
 /* BOOKING BUTTON */
 .makeup_fl_header .makeup_fl_header_nav_list ul li.mversion{
@@ -801,7 +786,7 @@ body{
 	margin-left: 50px;
 }
 
-/*------------------------------------------------------------------*/ 
+/*------------------------------------------------------------------*/
 /*	06) PAGINATION
 /*------------------------------------------------------------------*/
 .makeup_fl_content_in .makeup_fl_pagination{
@@ -847,7 +832,7 @@ body{
 	color: #575556;
 }
 
-/*------------------------------------------------------------------*/ 
+/*------------------------------------------------------------------*/
 /*	07) FOOTER {DEFAULT DISPLAY: NONE;}
 /*------------------------------------------------------------------*/
 .makeup_fl_footer{
@@ -859,7 +844,7 @@ body{
 	margin: 20px 0px;
 	overflow: hidden;
 	display: none;
-	
+
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
@@ -869,7 +854,7 @@ body{
 	clear: both;
 	float: left;
 	margin-bottom: 20px;
-	
+
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
@@ -888,7 +873,7 @@ body{
 	height: 40px;
 	background-color: rgba(255,255,255,0.05);
 	padding: 0px;
-	
+
 	transition: all .5s ease;
 	-o-transition: all .5s ease;
 	-ms-transition: all .5s ease;
@@ -1045,7 +1030,7 @@ body{
 .makeup_fl_about_team .team_holder .specialist .makeup_fl_social_icons ul{
 	text-align: left;
 }
-/*------------------------------------------------------------------*/ 
+/*------------------------------------------------------------------*/
 /*	10) SERVICES (NEW PAGE)
 /*------------------------------------------------------------------*/
 .makeup_fl_content_wrap .makeup_fl_services{
@@ -1122,7 +1107,7 @@ body{
     left: 0px;
 	text-decoration: none;
 }
-/*------------------------------------------------------------------*/ 
+/*------------------------------------------------------------------*/
 /*	11) COMMON TEMPLATES(SERVICE SINGLE, BLOG, ABOUT)
 /*------------------------------------------------------------------*/
 .makeup_fl_common{
@@ -1220,7 +1205,7 @@ body{
 	border-color: #371352;
 }
 
-/*------------------------------------------------------------------*/ 
+/*------------------------------------------------------------------*/
 /*	12) BLOG (NEW PAGE)
 /*------------------------------------------------------------------*/
 .makeup_fl_blog_list{
@@ -1256,8 +1241,8 @@ body{
 }
 .makeup_fl_blog_list .common_full_info .title_holder span a:hover{
 	border-bottom: 1px solid #999;
-}	
-/*------------------------------------------------------------------*/ 
+}
+/*------------------------------------------------------------------*/
 /*	13) MAGNIFIC POPUP (LIGHTBOXES)
 /*------------------------------------------------------------------*/
 /***  13.1) TRANSITION ***/
@@ -1327,7 +1312,7 @@ body{
 	height: auto;
 	background: rgba(0,0,0,0.9);
 	letter-spacing: 1px;
-	
+
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
@@ -1342,7 +1327,7 @@ body{
 	padding: 0px 45px;
 	color: rgba(255,255,255,.5);
 	margin-bottom: 30px;
-	
+
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
@@ -1364,7 +1349,7 @@ body{
 	color: #bbb;
 	border-bottom: 1px solid transparent;
 	padding-bottom: 3px;
-	
+
 	transition: all .5s ease;
 	-o-transition: all .5s ease;
 	-ms-transition: all .5s ease;
@@ -1404,7 +1389,7 @@ body{
 	background: rgba(0,0,0,0.9);
 	padding: 50px;
 	border-radius: 8px;
-	
+
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
@@ -1510,7 +1495,7 @@ a.totop:hover i{
 	letter-spacing: 3px;
 	font-weight: 400;
 	margin-bottom: 0px;
-	
+
 	color: #bbb;
 	opacity: .7;
 }
@@ -1527,7 +1512,7 @@ a.totop:hover i{
 	margin: 0px;
 	border-bottom: 1px solid rgba(255,255,255,.05);
 	padding: 0px 20px;
-	
+
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
@@ -1557,7 +1542,7 @@ a.totop:hover i{
 	padding: 3px 10px;
 	color: rgba(255,255,255,.5);
 }
-/*------------------------------------------------------------------*/ 
+/*------------------------------------------------------------------*/
 /*	14) GALLERY (NEW PAGE)
 /*------------------------------------------------------------------*/
 ul.makeup_fl_gallery_list{
@@ -1576,7 +1561,7 @@ ul.makeup_fl_gallery_list li img{
 	max-width: 100%;
 }
 
-/*------------------------------------------------------------------*/ 
+/*------------------------------------------------------------------*/
 /*	15) MEDIA QUERIES (FOR SMALL DEVICES)
 /*------------------------------------------------------------------*/
 @media (max-width: 1200px) {

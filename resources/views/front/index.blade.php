@@ -8,20 +8,20 @@
     <!-- FOTORAMA -->
     <div class="makeup_fl_fotorama">
         <div class="fotorama" data-nav="thumbs"  data-autoplay="4000" data-loop="true" data-keyboard="true"  data-arrows="true" data-click="true" data-swipe="true" data-stopautoplayontouch="false" data-transition="slide" data-fit="cover" data-width="100%">
-            <a href="{{asset('front/img/full1.jpg')}}">
-                <img src="{{asset('front/img/thumb1.jpg')}}" width="144" height="96" alt="" />
+            <a href="{{asset($content->slider1)}}">
+                <img src="{{asset($content->slider1)}}" width="144" height="96" alt="" />
             </a>
-            <a href="{{asset('front/img/full2.jpg')}}">
-                <img src="{{asset('front/img/thumb2.jpg')}}" width="144" height="96" alt="" />
+            <a href="{{asset($content->slider2)}}">
+                <img src="{{asset($content->slider2)}}" width="144" height="96" alt="" />
             </a>
-            <a href="{{asset('front/img/full3.jpg')}}">
-                <img src="{{asset('front/img/thumb3.jpg')}}" width="144" height="96" alt="" />
+            <a href="{{asset($content->slider3)}}">
+                <img src="{{asset($content->slider3)}}" width="144" height="96" alt="" />
             </a>
-            <a href="{{asset('front/img/full4.jpg')}}">
-                <img src="{{asset('front/img/thumb4.jpg')}}" width="144" height="96" alt="" />
+            <a href="{{asset($content->slider4)}}">
+                <img src="{{asset($content->slider4)}}" width="144" height="96" alt="" />
             </a>
-            <a href="{{asset('front/img/full5.jpg')}}">
-                <img src="{{asset('front/img/thumb5.jpg')}}" width="144" height="96" alt="" />
+            <a href="{{asset($content->slider5)}}">
+                <img src="{{asset($content->slider5)}}" width="144" height="96" alt="" />
             </a>
         </div>
     </div>
@@ -33,29 +33,19 @@
             <div class="quote"><i class="xcon-quote-right-alt"></i></div>
             <div class="owl-carousel owl-theme">
                 <div class="item">
-                    <p>Aliquam metus ex, laoreet in nulla et, varius aliquam est. Vestibulum neque dui, auctor sit amet tincidunt ac, sodales sit amet est. Quisque gravida sit amet odio sed vulputate. Curabitur eleifend.</p>
+                    <p>{{$content->review1}}</p>
                     <br />
-                    <span>Laura Brandon</span>
+                    <span>{{$content->rgive1}}</span>
                 </div>
                 <div class="item">
-                    <p>Sed ultrices eleifend risus eu convallis. Cras lacinia interdum ligula id posuere. Sed nec diam libero. Nunc arcu orci, mollis nec condimentum tincidunt, facilisis in nunc. Quisque malesuada molestie.</p>
+                    <p>{{$content->review2}}</p>
                     <br />
-                    <span>Britney Spears</span>
+                    <span>{{$content->rgive2}}</span>
                 </div>
                 <div class="item">
-                    <p>Sed ultrices eleifend risus eu convallis. Cras lacinia interdum ligula id posuere. Sed nec diam libero. Nunc arcu orci, mollis nec condimentum tincidunt, facilisis in nunc. Quisque malesuada molestie.</p>
+                    <p>{{$content->review3}}</p>
                     <br />
-                    <span>Selena Gomez</span>
-                </div>
-                <div class="item">
-                    <p>Sed ultrices eleifend risus eu convallis. Cras lacinia interdum ligula id posuere. Sed nec diam libero. Nunc arcu orci, mollis nec condimentum tincidunt, facilisis in nunc. Quisque malesuada molestie.</p>
-                    <br />
-                    <span>Paula Samry</span>
-                </div>
-                <div class="item">
-                    <p>Sed ultrices eleifend risus eu convallis. Cras lacinia interdum ligula id posuere. Sed nec diam libero. Nunc arcu orci, mollis nec condimentum tincidunt, facilisis in nunc. Quisque malesuada molestie.</p>
-                    <br />
-                    <span>Wendy Clifford</span>
+                    <span>{{$content->rgive3}}</span>
                 </div>
             </div>
             <div class="prev_next_btn">
@@ -73,42 +63,42 @@
         <!-- PACKAGE LIST #1 -->
         <div class="makeup_fl_package_list_in makeup_fl_masonry_in">
             <div class="pckg_img">
-                <img src="{{asset('front/img/package11.jpg')}}" alt="" />
+                <img src="{{asset($content->o1image)}}" alt="" />
             </div>
             <div class="pckg_info">
                 <div class="title_holder">
-                    <h3>PForfait maquillage arty</h3>
-                    <span>Durée : 2 - 3 heures</span>
+                    <h3>{{$content->o1title}}</h3>
+                    <span>Durée : {{$content->o1duration}}</span>
                 </div>
                 <div class="price_list">
                     <ul>
                         <li>
                             <div class="price_li">
-                                <span class="span1">Conseil maquillage</span>
-                                <span class="span2">19.00 €</span>
+                                <span class="span1">{{$content->o1d1}}</span>
+                                <span class="span2">{{$content->o1p1}} €</span>
                             </div>
                         </li>
                         <li>
                             <div class="price_li">
-                                <span class="span1">Coupe de cheveux &amp; Style</span>
-                                <span class="span2">25.00 €</span>
+                                <span class="span1">{{$content->o1d2}}</span>
+                                <span class="span2">{{$content->o1p2}} €</span>
                             </div>
                         </li>
                         <li>
                             <div class="price_li">
-                                <span class="span1">Maquillage Aérographe</span>
-                                <span class="span2">31.00 €</span>
+                                <span class="span1">{{$content->o1d3}}</span>
+                                <span class="span2">{{$content->o1p3}} €</span>
                             </div>
                         </li>
                         <li>
                             <div class="price_li">
-                                <span class="span1">Application de faux cils</span>
-                                <span class="span2">24.00 €</span>
+                                <span class="span1">{{$content->o1d4}}</span>
+                                <span class="span2">{{$content->o1p4}} €</span>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <div class="total"><span>Total: 99.00 €</span></div>
+                <div class="total"><span>Total: {{$content->o1p1 + $content->o1p2 +  $content->o1p3 +  $content->o1p4}} €</span></div>
                 <div class="footer">
                     <div class="footer_btn">
                         <a href="{{route('modal.booking')}}" class="ajax-popup-link">Réservation en ligne</a>
@@ -122,42 +112,42 @@
         <!-- PACKAGE LIST #2 -->
         <div class="makeup_fl_package_list_in makeup_fl_masonry_in">
             <div class="pckg_img">
-                <img src="{{asset('front/img/package22.jpg')}}" alt="" />
+                <img src="{{asset($content->o2image)}}" alt="" />
             </div>
             <div class="pckg_info">
                 <div class="title_holder">
-                    <h3>Forfait maquillage commercial</h3>
-                    <span>Durée : 2 - 3 heures</span>
+                    <h3>{{$content->o2title}}</h3>
+                    <span>Durée : {{$content->o2duration}}</span>
                 </div>
                 <div class="price_list">
                     <ul>
                         <li>
                             <div class="price_li">
-                                <span class="span1">Conseil maquillage</span>
-                                <span class="span2">19.00 €</span>
+                                <span class="span1">{{$content->o2d1}}</span>
+                                <span class="span2">{{$content->o2p1}} €</span>
                             </div>
                         </li>
                         <li>
                             <div class="price_li">
-                                <span class="span1">Application de maquillage d'événement</span>
-                                <span class="span2">35.00 €</span>
+                                <span class="span1">{{$content->o2d2}}</span>
+                                <span class="span2">{{$content->o2p2}} €</span>
                             </div>
                         </li>
                         <li>
                             <div class="price_li">
-                                <span class="span1">Application de cils bénéfique</span>
-                                <span class="span2">10.00 €</span>
+                                <span class="span1">{{$content->o2d3}}</span>
+                                <span class="span2">{{$content->o2p3}} €</span>
                             </div>
                         </li>
                         <li>
                             <div class="price_li">
-                                <span class="span1">Lèvre & Cire pour le menton</span>
-                                <span class="span2">22.00 €</span>
+                                <span class="span1">{{$content->o2d4}}</span>
+                                <span class="span2">{{$content->o2p4}} €</span>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <div class="total"><span>Total: 86.00 €</span></div>
+                <div class="total"><span>Total: {{$content->o2p1 + $content->o2p2 +  $content->o2p3 +  $content->o2p4}} €</span></div>
                 <div class="footer">
                     <div class="footer_btn">
                         <a href="{{route('modal.booking')}}" class="ajax-popup-link">Réservation en ligne</a>
