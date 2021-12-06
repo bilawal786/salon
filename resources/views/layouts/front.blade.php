@@ -31,6 +31,9 @@ $gs = \App\GeneralSettings::find(1);
     <link type="text/css" rel="stylesheet" href="{{asset('front/css/timepicker.css')}}" />
     <link type="text/css" rel="stylesheet" href="{{asset('front/css/style.css')}}" />
 <!--[if lt IE 9]> <script type="text/javascript" src="{{asset('front/js/modernizr.custom.js')}}"></script> <![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- /STYLES -->
     <style>
 
@@ -48,8 +51,22 @@ $gs = \App\GeneralSettings::find(1);
             background-position: center center;
             background-attachment: fixed;
         }
-
+        button{
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #bbb;
+            letter-spacing: 1px;
+            padding: 11px 36px;
+            background: #371352;
+            font-size: 12px;
+            border: 2px solid transparent;
+            display: inline-block;
+        }
+        input[type="password"]{
+            width: 100% !important;
+        }
     </style>
+    @yield('style')
 </head>
 
 <body>
@@ -76,14 +93,21 @@ $gs = \App\GeneralSettings::find(1);
                                 <li><a href="{{route('front.index')}}"><span>Accueil</span></a></li>
                                 <li><a href="{{route('front.about')}}"><span>À propos de nous</span></a></li>
                                 <li><a href="{{route('front.services')}}"><span>Nos services</span></a></li>
+                                <li><a href="{{route('front.products')}}"><span>Nos produits</span></a></li>
                                 <li><a href="{{route('front.gallery')}}"><span>Galerie</span></a></li>
                                 <li><a href="{{route('front.blogs')}}"><span>Notre blog</span></a></li>
-                                <li><a href="{{route('front.contact')}}"><span>Contact</span></a></li>
+                                <li><a href="{{route('cartitems')}}"><span>Panier</span></a></li>
+                                @guest
+                                    <li><a href="{{route('login')}}"><span>Connexion</span></a></li>
+                                @endguest
+                                @auth
+                                    <li><a href=""><span>{{Auth::user()->fname}} {{Auth::user()->lname}}</span></a></li>
+                                @endauth
                             </ul>
                         </div>
                         <div class="makeup_fl_booking_btn">
                             <div class="btn_s_a"><a href="{{route('modal.address')}}" class="ajax-popup-link"><i class="xcon-home"></i></a></div>
-                            <div class="btn_b"><a href="{{route('modal.booking')}}" class="ajax-popup-link">Réservation</a></div>
+                            <div class="btn_b"><a href="{{route('front.contact')}}" class="ajax-popup-link">Contact</a></div>
                             <div class="btn_s_b"><a href="{{route('modal.opening')}}" class="ajax-popup-link"><i class="xcon-clock-1"></i></a></div>
                         </div>
                         <div class="makeup_fl_social_icons">
@@ -132,16 +156,23 @@ $gs = \App\GeneralSettings::find(1);
                                 <li class="mversion">
                                     <div class="makeup_fl_booking_btn">
                                         <div class="btn_s_a"><a href="{{route('modal.address')}}" class="ajax-popup-link"><i class="xcon-home"></i></a></div>
-                                        <div class="btn_b"><a href="{{route('modal.booking')}}" class="ajax-popup-link">Réservation en ligne</a></div>
+                                        <div class="btn_b"><a href="{{route('front.contact')}}" class="ajax-popup-link">Contact</a></div>
                                         <div class="btn_s_b"><a href="{{route('modal.opening')}}" class="ajax-popup-link"><i class="xcon-clock-1"></i></a></div>
                                     </div>
                                 </li>
                                 <li><a href="{{route('front.index')}}"><span>Accueil</span><br /><span class="row"></span></a></li>
                                 <li><a href="{{route('front.about')}}"><span>À propos de nous</span></a></li>
                                 <li><a href="{{route('front.services')}}"><span>Nos services</span></a></li>
+                                <li><a href="{{route('front.products')}}"><span>Nos produits</span></a></li>
                                 <li><a href="{{route('front.gallery')}}"><span>Galerie</span></a></li>
                                 <li><a href="{{route('front.blogs')}}"><span>Notre blog</span></a></li>
-                                <li><a href="{{route('front.contact')}}"><span>Contact</span></a></li>
+                                <li><a href="{{route('cartitems')}}"><span>Panier</span></a></li>
+                                @guest
+                                <li><a href="{{route('login')}}"><span>Connexion</span></a></li>
+                                @endguest
+                                @auth
+                                    <li><a href=""><span>{{Auth::user()->fname}} {{Auth::user()->lname}}</span></a></li>
+                                @endauth
                             </ul>
                         </div>
                     </div>
@@ -190,6 +221,6 @@ $gs = \App\GeneralSettings::find(1);
 <!--[if lt IE 10]> <script type="text/javascript" src="{{asset('front/js/ie8.js')}}"></script> <![endif]-->
 <script type="text/javascript" src="{{asset('front/js/init.js')}}"></script>
 <!-- /SCRIPTS -->
-
+@yield('script')
 </body>
 </html>

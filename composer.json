@@ -15,7 +15,9 @@
         "laravel/framework": "^7.29",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^2.4",
-        "spatie/laravel-image-optimizer": "^1.6"
+        "spatie/laravel-image-optimizer": "^1.6",
+        "darryldecode/cart": "^4.2",
+        "stripe/stripe-php": "^7.88"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

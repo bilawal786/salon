@@ -2,6 +2,7 @@
 
 use App\Content;
 use App\GeneralSettings;
+use App\SaleProduct;
 use Illuminate\Database\Seeder;
 
 class GeneralSeeder extends Seeder
@@ -70,6 +71,52 @@ class GeneralSeeder extends Seeder
             'o2p2' => '25',
             'o2p3' => '31',
             'o2p4' => '24',
+        ]);
+        SaleProduct::create([
+            'product_id' => '1',
+            'date' => 'June 15, 2021 12:00:00'
+        ]);
+        \App\Service::create([
+            'title' => 'Maquillage de mariée',
+            'image' => 'front/img/services/1.jpg',
+            'price' => '37.00',
+            'duration' => '25 - 35 min',
+            'details' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+        ]);
+        \App\Service::create([
+            'title' => 'Maquillage de mariée',
+            'image' => 'front/img/services/2.jpg',
+            'price' => '38.00',
+            'duration' => '25 - 35 min',
+            'details' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+        ]);
+        \App\Service::create([
+            'title' => 'Maquillage de mariée',
+            'image' => 'front/img/services/3.jpg',
+            'price' => '32.00',
+            'duration' => '25 - 35 min',
+            'details' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+        ]);
+        \App\Service::create([
+            'title' => 'Maquillage de mariée',
+            'image' => 'front/img/services/4.jpg',
+            'price' => '65.00',
+            'duration' => '25 - 35 min',
+            'details' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+        ]);
+        \App\Service::create([
+            'title' => 'Maquillage de mariée',
+            'image' => 'front/img/services/5.jpg',
+            'price' => '95.00',
+            'duration' => '25 - 35 min',
+            'details' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+        ]);
+        \App\Service::create([
+            'title' => 'Maquillage de mariée',
+            'image' => 'front/img/services/6.jpg',
+            'price' => '45.00',
+            'duration' => '25 - 35 min',
+            'details' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
         ]);
     }
 }

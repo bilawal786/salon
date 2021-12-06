@@ -27,6 +27,38 @@
     </div>
     <!-- /FOTORAMA -->
 
+    <div class="makeup_fl_content_testimonials">
+        @if($saleproduct)
+            <?php
+            $product = \App\Product::where('id', $saleproduct->product_id)->first();
+            ?>
+            @if($product)
+                @if(!$saleproduct->date->ispast())
+                    <div class="testimonials" style="padding: 16px 35px;">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="{{asset($product->photo)}}" alt="" />
+
+                            </div>
+                            <div class="col-md-6">
+                                <h2>{{$product->title}}</h2>
+                                <p>{{$product->category->name}} / {{$product->subcategory->name}} </p>
+                                <h3>
+                                    @if($product->oldprice)
+                                        <del>{{$product->oldprice}} €</del>
+                                    @endif
+                                    {{$product->price}} €
+                                </h3>
+                                <p style="font-size: 30px;" id="demotime"></p>
+                                <a href="{{route('front.product', ['id' => $product->id])}}"> <button>Acheter</button></a>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+            @endif
+        @endif
+    </div>
+
     <!-- TESTIMONIALS -->
     <div class="makeup_fl_content_testimonials">
         <div class="testimonials">
@@ -164,4 +196,36 @@
 <!-- /CONTENT WRAP -->
 
 @endsection
+@section('script')
+    <script>
+        // Set the date we're counting down to
 
+        var countDownDate = new Date("{{$saleproduct->date->format('M d, Y H:m')}}").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("demotime").innerHTML = days + "jrs  " + hours + "h  "
+                + minutes + "m  " + seconds + "s  ";
+
+            // If the count down is over, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demotime").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+@endsection

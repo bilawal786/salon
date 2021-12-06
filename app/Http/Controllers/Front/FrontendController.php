@@ -4,19 +4,29 @@ namespace App\Http\Controllers\Front;
 
 use App\Content;
 use App\Http\Controllers\Controller;
+use App\Order;
+use App\Product;
+use App\SaleProduct;
+use App\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class FrontendController extends Controller
 {
     public function index(){
         $content = Content::find(1);
-        return view('front.index', compact('content'));
+        $saleproduct = SaleProduct::find(1);
+        return view('front.index', compact('content', 'saleproduct'));
+    }
+    public function admin(){
+        return view('admin.login');
     }
     public function about(){
         return view('front.about');
     }
     public function services(){
-        return view('front.services');
+        $services = Service::all();
+        return view('front.services', compact('services'));
     }
     public function gallery(){
         return view('front.gallery');
@@ -35,5 +45,73 @@ class FrontendController extends Controller
     }
     public function modalOpening(){
         return view('modal.opening');
+    }
+    public function products(){
+        $products = Product::all();
+        return view('front.products', compact('products'));
+    }
+    public function product($id){
+        $product = Product::find($id);
+        return view('front.product', compact('product'));
+    }
+    public function addtocart(Request $request){
+        $product = Product::where('id', $request->id)->first();
+        \Cart::add($product->id, $product->title, $product->price, $request->quantity);
+        return redirect()->route('cartitems');
+    }
+    public function cartitems(){
+        $cartitems = \Cart::getContent();
+        $cartTotalQuantity = \Cart::getTotalQuantity();
+        $total = \Cart::getTotal();
+        return view('front.cart', compact('cartitems', 'total', 'cartTotalQuantity'));
+    }
+    public function checkout(){
+        $user = Auth::user();
+        $cartitems = \Cart::getContent();
+        $cartTotalQuantity = \Cart::getTotalQuantity();
+        $total = \Cart::getTotal();
+        if(isset($total)){
+            \Stripe\Stripe::setApiKey (env('STRIPE_SECRET_KEY'));
+            $payment_intent = \Stripe\PaymentIntent::create([
+                'amount' => ($total) *100,
+                'currency' => 'EUR'
+            ]);
+        }
+        $intent = $payment_intent->client_secret;
+        return view('front.checkout', compact('cartitems', 'total', 'cartTotalQuantity', 'user', 'intent'));
+    }
+    public function removcart($id){
+        \Cart::remove($id);
+        return redirect()->back();
+    }
+    public function checkoutSubmit(Request $request){
+        $cartitems = \Cart::getContent();
+
+        $order = new Order();
+        $order->user_id = Auth::user()->id;
+        $order->fname = $request->fname;
+        $order->lname = $request->lname;
+        $order->email = $request->email;
+        $order->phone = $request->phone;
+        $order->address = $request->address;
+        $order->notes = $request->notes;
+        $order->total = $request->total;
+        $order->postal = $request->postal;
+        $order->products = $cartitems;
+        $order->paymentstatus = '1';
+
+        $order->order_number = "ON-".rand(100000000, 900000000);
+        $order->save();
+
+        /*foreach(json_decode($order->products) as $item){
+            $product = Product::find($item->id);
+            if ($product){
+                $product->quantity = $product->quantity - $item->quantity;
+                $product->update();
+            }
+        }*/
+
+        \Cart::clear();
+        return view('front.paymentsuccess', compact('order'));
     }
 }

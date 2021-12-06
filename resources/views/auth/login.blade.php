@@ -1,61 +1,147 @@
-@extends('layouts.app')
+@extends('layouts.front')
 
-@section('content')
+@section('section')
 
-    <div class="login-box">
-        <!-- /.login-logo -->
-        <div class="card card-outline card-primary">
-            <div class="card-header text-center">
-                <a href="#" class="h1" style="color: blue; font-style: italic;"><b>Tableau de bord </b></a>
+    <!-- CONTENT WRAP -->
+    <div class="makeup_fl_content_wrap">
+
+        <!-- COMMON -->
+        <div class="makeup_fl_common">
+
+            <div class="makeup_fl_title_holder">
+                <div class="line"></div>
+                <span>Connexion</span>
             </div>
-            <div class="card-body">
-                <p class="login-box-msg">Connectez-vous pour démarrer votre session</p>
+
+
+            <div class="makeup_fl_form">
 
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
-                    <div class="input-group mb-3">
-                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
-
-                        @error('email')
-                        <span class="invalid-feedback" role="alert">
+                    <div class="fl-col-6">
+                        <div class="your-name">
+                            <label>Email<span>*</span></label>
+                            <input type="text" name="email" placeholder="Email"/>
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                        @enderror
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
-                            </div>
+                            @enderror
                         </div>
                     </div>
-                    <div class="input-group mb-3">
-                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Mot de passe">
-
-                        @error('password')
-                        <span class="invalid-feedback" role="alert">
+                    <div class="fl-col-6 last">
+                        <div class="your-email">
+                            <label>Mot de passe<span>*</span></label>
+                            <input type="password" name="password" placeholder="Mot de passe"/>
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                        @enderror
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
+                            @enderror
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-7">
-                            <div class="icheck-primary">
-                            </div>
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-5">
-                            <button type="submit" class="btn btn-primary btn-block">S'identifier</button>
-                        </div>
-                        <!-- /.col -->
+                    <div class="button">
+                        <input type="submit" class="makeup_fl_btn" value="Connexion" />
                     </div>
                 </form>
             </div>
-            <!-- /.card-body -->
+
+
         </div>
-        <!-- /.card -->
+        <!-- /COMMMON -->
+
+
     </div>
+    <!-- /CONTENT WRAP -->
+    <!-- CONTENT WRAP -->
+    <div class="makeup_fl_content_wrap">
+
+        <!-- COMMON -->
+        <div class="makeup_fl_common">
+
+            <div class="makeup_fl_title_holder">
+                <div class="line"></div>
+                <span>S'inscrire</span>
+            </div>
+
+
+            <div class="makeup_fl_form">
+
+                <form method="POST" action="{{ route('register') }}">
+                    @csrf
+                    <div class="fl-col-6">
+                        <div class="your-name">
+                            <label>Prénom<span>*</span></label>
+                            <input type="text" name="fname" placeholder="Prénom"/>
+                            @error('fname')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="fl-col-6 last">
+                        <div class="your-name">
+                            <label>Nom de famille<span>*</span></label>
+                            <input type="text" name="lname" placeholder="Nom de famille"/>
+                            @error('lname')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="fl-col-6">
+                        <div class="your-name">
+                            <label>Email<span>*</span></label>
+                            <input type="text" name="email" placeholder="Email"/>
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="fl-col-6 last">
+                        <div class="your-name">
+                            <label>Téléphone<span>*</span></label>
+                            <input type="text" name="phone" placeholder="Téléphone"/>
+                            @error('phone')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="fl-col-6">
+                        <div class="your-name">
+                            <label>Mot de passe<span>*</span></label>
+                            <input type="text" name="password" placeholder="Mot de passe"/>
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="fl-col-6 last">
+                        <div class="your-name">
+                            <label>Confirmez le mot de passe<span>*</span></label>
+                            <input type="password" name="password_confirmation" placeholder="Confirmez le mot de passe"/>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" class="makeup_fl_btn" value="S'inscrire" />
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+        <!-- /COMMMON -->
+
+
+    </div>
+    <!-- /CONTENT WRAP -->
 @endsection
+

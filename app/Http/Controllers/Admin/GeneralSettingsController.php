@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Content;
 use App\GeneralSettings;
 use App\Http\Controllers\Controller;
+use App\Product;
+use App\SaleProduct;
 use Illuminate\Http\Request;
 use ImageOptimizer;
 class GeneralSettingsController extends Controller
@@ -164,6 +166,21 @@ class GeneralSettingsController extends Controller
         $content->o2p4 = $request->o2p4;
 
         $content->update();
+        $notification = array(
+            'messege' => 'Ajouté avec succès!',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
+    public function saleproduct(){
+        $products = Product::all();
+        return view('admin.saleproduct.index', compact('products'));
+    }
+    public function saleproductstore(Request $request){
+        $saleproduct = SaleProduct::find(1);
+        $saleproduct->product_id = $request->product_id;
+        $saleproduct->date = $request->date;
+        $saleproduct->update();
         $notification = array(
             'messege' => 'Ajouté avec succès!',
             'alert-type' => 'success'
