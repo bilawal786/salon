@@ -118,5 +118,39 @@ class GeneralSeeder extends Seeder
             'duration' => '25 - 35 min',
             'details' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
         ]);
+        \App\About::create([
+            'image' => 'front/img/about/about_img.jpg',
+            'description' => 'Le secret du mouvement et du volume époustouflant de ce look de cheveux longs réside uniquement dans le style. Coupé en couches douces et effilé sur les côtés, toute laction est séchée au sèche-cheveux et repassée à chaud dans les longues tresses, mèche par mèche Le secret du mouvement et du volume époustouflant de ce look de cheveux longs réside uniquement dans le style. Coupé en couches douces et effilé sur les côtés, toute laction est séchée au sèche-cheveux et repassée à chaud dans les longues tresses, mèche par mèche',
+        ]);
+        \App\Gallery::create([
+            'image' => 'front/img/gallery/thumb1.jpg',
+        ]);
+        \App\Gallery::create([
+            'image' => 'front/img/gallery/thumb2.jpg',
+        ]);
+        \App\Gallery::create([
+            'image' => 'front/img/gallery/thumb3.jpg',
+        ]);
+        \App\Gallery::create([
+            'image' => 'front/img/gallery/thumb4.jpg',
+        ]);
+        \App\Gallery::create([
+            'image' => 'front/img/gallery/thumb5.jpg',
+        ]);
+        \App\Gallery::create([
+            'image' => 'front/img/gallery/thumb6.jpg',
+        ]);
+        \App\Gallery::create([
+            'image' => 'front/img/gallery/thumb7.jpg',
+        ]);
+        \App\Gallery::create([
+            'image' => 'front/img/gallery/thumb8.jpg',
+        ]);
+        \App\Gallery::create([
+            'image' => 'front/img/gallery/thumb9.jpg',
+        ]);
+        \App\Gallery::create([
+            'image' => 'front/img/gallery/thumb10.jpg',
+        ]);
     }
 }

@@ -28,8 +28,9 @@ class ProductController extends Controller
         $product->sku = $request->sku;
         $product->description = $request->description;
         $product->material = $request->material;
+        $product->quantity = $request->quantity;
 
-        if($request->size){
+       /* if($request->size){
             foreach($request->size as $size)
             {
                 $data[] = $size;
@@ -49,7 +50,7 @@ class ProductController extends Controller
                 $data2[] = $color;
                 $product->color = json_encode($data2);
             }
-        }
+        }*/
 
         if ($request->hasfile('photo')) {
             $image1 = $request->file('photo');
@@ -97,8 +98,9 @@ class ProductController extends Controller
         $product->sku = $request->sku;
         $product->description = $request->description;
         $product->material = $request->material;
+        $product->quantity = $request->quantity;
 
-        if($request->size){
+       /* if($request->size){
             foreach($request->size as $size)
             {
                 $data[] = $size;
@@ -118,7 +120,7 @@ class ProductController extends Controller
                 $data2[] = $color;
                 $product->color = json_encode($data2);
             }
-        }
+        }*/
 
         if ($request->hasfile('photo')) {
             $image1 = $request->file('photo');

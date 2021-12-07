@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\About;
 use App\Content;
+use App\Gallery;
 use App\GeneralSettings;
 use App\Http\Controllers\Controller;
 use App\Product;
@@ -181,6 +183,56 @@ class GeneralSettingsController extends Controller
         $saleproduct->product_id = $request->product_id;
         $saleproduct->date = $request->date;
         $saleproduct->update();
+        $notification = array(
+            'messege' => 'Ajouté avec succès!',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
+    public function about(){
+        $about = About::find(1);
+        return view('admin.generalsettings.about', compact('about'));
+    }
+    public function gallery(){
+        $gallery = Gallery::all();
+        return view('admin.generalsettings.gallery', compact('gallery'));
+    }
+    public function gallerydelete($id){
+        $gallery = Gallery::find($id);
+        $gallery->delete();
+        $notification = array(
+            'messege' => 'Supreme succès!',
+            'alert-type' => 'error'
+        );
+        return redirect()->back()->with($notification);
+    }
+    public function aboutStore(Request $request){
+        $about = About::find(1);
+        $about->description = $request->description;
+        if ($request->hasfile('image')) {
+            $image2 = $request->file('image');
+            $name2 = time() . 'offer' . '.' . $image2->getClientOriginalExtension();
+            $destinationPath = 'offer/';
+            $image2->move($destinationPath, $name2);
+            $about->image = 'offer/' . $name2;
+        }
+        $about->update();
+        $notification = array(
+            'messege' => 'Ajouté avec succès!',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
+    public function galleryStore(Request $request){
+        $galery= new Gallery();
+        if ($request->hasfile('image')) {
+            $image2 = $request->file('image');
+            $name2 = time() . 'offer' . '.' . $image2->getClientOriginalExtension();
+            $destinationPath = 'offer/';
+            $image2->move($destinationPath, $name2);
+            $galery->image = 'offer/' . $name2;
+        }
+        $galery->save();
         $notification = array(
             'messege' => 'Ajouté avec succès!',
             'alert-type' => 'success'

@@ -120,6 +120,12 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
+                                        <label for="">Quantité</label>
+                                        <input type="text" name="quantity"  required class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
                                         <label for="">La vignette</label>
                                         <input type="file" name="photo" required class="form-control">
                                     </div>

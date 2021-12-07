@@ -89,108 +89,108 @@
     </div>
     <!-- /TESTIMONIALS -->
 
-    <!-- PACKAGE LIST -->
-    <div class="makeup_fl_package_list makeup_fl_masonry">
+{{--    <!-- PACKAGE LIST -->--}}
+{{--    <div class="makeup_fl_package_list makeup_fl_masonry">--}}
 
-        <!-- PACKAGE LIST #1 -->
-        <div class="makeup_fl_package_list_in makeup_fl_masonry_in">
-            <div class="pckg_img">
-                <img src="{{asset($content->o1image)}}" alt="" />
-            </div>
-            <div class="pckg_info">
-                <div class="title_holder">
-                    <h3>{{$content->o1title}}</h3>
-                    <span>Durée : {{$content->o1duration}}</span>
-                </div>
-                <div class="price_list">
-                    <ul>
-                        <li>
-                            <div class="price_li">
-                                <span class="span1">{{$content->o1d1}}</span>
-                                <span class="span2">{{$content->o1p1}} €</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="price_li">
-                                <span class="span1">{{$content->o1d2}}</span>
-                                <span class="span2">{{$content->o1p2}} €</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="price_li">
-                                <span class="span1">{{$content->o1d3}}</span>
-                                <span class="span2">{{$content->o1p3}} €</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="price_li">
-                                <span class="span1">{{$content->o1d4}}</span>
-                                <span class="span2">{{$content->o1p4}} €</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="total"><span>Total: {{$content->o1p1 + $content->o1p2 +  $content->o1p3 +  $content->o1p4}} €</span></div>
-                <div class="footer">
-                    <div class="footer_btn">
-                        <a href="{{route('modal.booking')}}" class="ajax-popup-link">Réservation en ligne</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /PACKAGE LIST #1 -->
+{{--        <!-- PACKAGE LIST #1 -->--}}
+{{--        <div class="makeup_fl_package_list_in makeup_fl_masonry_in">--}}
+{{--            <div class="pckg_img">--}}
+{{--                <img src="{{asset($content->o1image)}}" alt="" />--}}
+{{--            </div>--}}
+{{--            <div class="pckg_info">--}}
+{{--                <div class="title_holder">--}}
+{{--                    <h3>{{$content->o1title}}</h3>--}}
+{{--                    <span>Durée : {{$content->o1duration}}</span>--}}
+{{--                </div>--}}
+{{--                <div class="price_list">--}}
+{{--                    <ul>--}}
+{{--                        <li>--}}
+{{--                            <div class="price_li">--}}
+{{--                                <span class="span1">{{$content->o1d1}}</span>--}}
+{{--                                <span class="span2">{{$content->o1p1}} €</span>--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <div class="price_li">--}}
+{{--                                <span class="span1">{{$content->o1d2}}</span>--}}
+{{--                                <span class="span2">{{$content->o1p2}} €</span>--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <div class="price_li">--}}
+{{--                                <span class="span1">{{$content->o1d3}}</span>--}}
+{{--                                <span class="span2">{{$content->o1p3}} €</span>--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <div class="price_li">--}}
+{{--                                <span class="span1">{{$content->o1d4}}</span>--}}
+{{--                                <span class="span2">{{$content->o1p4}} €</span>--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
+{{--                <div class="total"><span>Total: {{$content->o1p1 + $content->o1p2 +  $content->o1p3 +  $content->o1p4}} €</span></div>--}}
+{{--                <div class="footer">--}}
+{{--                    <div class="footer_btn">--}}
+{{--                        <a href="{{route('modal.booking')}}" class="ajax-popup-link">Réservation en ligne</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <!-- /PACKAGE LIST #1 -->--}}
 
 
-        <!-- PACKAGE LIST #2 -->
-        <div class="makeup_fl_package_list_in makeup_fl_masonry_in">
-            <div class="pckg_img">
-                <img src="{{asset($content->o2image)}}" alt="" />
-            </div>
-            <div class="pckg_info">
-                <div class="title_holder">
-                    <h3>{{$content->o2title}}</h3>
-                    <span>Durée : {{$content->o2duration}}</span>
-                </div>
-                <div class="price_list">
-                    <ul>
-                        <li>
-                            <div class="price_li">
-                                <span class="span1">{{$content->o2d1}}</span>
-                                <span class="span2">{{$content->o2p1}} €</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="price_li">
-                                <span class="span1">{{$content->o2d2}}</span>
-                                <span class="span2">{{$content->o2p2}} €</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="price_li">
-                                <span class="span1">{{$content->o2d3}}</span>
-                                <span class="span2">{{$content->o2p3}} €</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="price_li">
-                                <span class="span1">{{$content->o2d4}}</span>
-                                <span class="span2">{{$content->o2p4}} €</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="total"><span>Total: {{$content->o2p1 + $content->o2p2 +  $content->o2p3 +  $content->o2p4}} €</span></div>
-                <div class="footer">
-                    <div class="footer_btn">
-                        <a href="{{route('modal.booking')}}" class="ajax-popup-link">Réservation en ligne</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /PACKAGE LIST #2 -->
+{{--        <!-- PACKAGE LIST #2 -->--}}
+{{--        <div class="makeup_fl_package_list_in makeup_fl_masonry_in">--}}
+{{--            <div class="pckg_img">--}}
+{{--                <img src="{{asset($content->o2image)}}" alt="" />--}}
+{{--            </div>--}}
+{{--            <div class="pckg_info">--}}
+{{--                <div class="title_holder">--}}
+{{--                    <h3>{{$content->o2title}}</h3>--}}
+{{--                    <span>Durée : {{$content->o2duration}}</span>--}}
+{{--                </div>--}}
+{{--                <div class="price_list">--}}
+{{--                    <ul>--}}
+{{--                        <li>--}}
+{{--                            <div class="price_li">--}}
+{{--                                <span class="span1">{{$content->o2d1}}</span>--}}
+{{--                                <span class="span2">{{$content->o2p1}} €</span>--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <div class="price_li">--}}
+{{--                                <span class="span1">{{$content->o2d2}}</span>--}}
+{{--                                <span class="span2">{{$content->o2p2}} €</span>--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <div class="price_li">--}}
+{{--                                <span class="span1">{{$content->o2d3}}</span>--}}
+{{--                                <span class="span2">{{$content->o2p3}} €</span>--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <div class="price_li">--}}
+{{--                                <span class="span1">{{$content->o2d4}}</span>--}}
+{{--                                <span class="span2">{{$content->o2p4}} €</span>--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
+{{--                <div class="total"><span>Total: {{$content->o2p1 + $content->o2p2 +  $content->o2p3 +  $content->o2p4}} €</span></div>--}}
+{{--                <div class="footer">--}}
+{{--                    <div class="footer_btn">--}}
+{{--                        <a href="{{route('modal.booking')}}" class="ajax-popup-link">Réservation en ligne</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <!-- /PACKAGE LIST #2 -->--}}
 
-    </div>
-    <!-- /PACKAGE LIST -->
+{{--    </div>--}}
+{{--    <!-- /PACKAGE LIST -->--}}
 
 </div>
 <!-- /CONTENT WRAP -->

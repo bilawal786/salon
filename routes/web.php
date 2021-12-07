@@ -18,6 +18,7 @@ Route::get('/','Front\FrontendController@index')->name('front.index');
 Route::get('/about','Front\FrontendController@about')->name('front.about');
 Route::get('/services','Front\FrontendController@services')->name('front.services');
 Route::get('/front/gallery','Front\FrontendController@gallery')->name('front.gallery');
+Route::get('/front/category/{id}','Front\FrontendController@category')->name('front.category');
 Route::get('/blogs','Front\FrontendController@blogs')->name('front.blogs');
 Route::get('/products','Front\FrontendController@products')->name('front.products');
 Route::get('/product/{id}','Front\FrontendController@product')->name('front.product');
@@ -38,6 +39,9 @@ Auth::routes();
 Route::group(['middleware' => ['auth', 'web', 'role']], function() {
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/general/about', 'Admin\GeneralSettingsController@about')->name('general.about');
+Route::get('/general/gallery', 'Admin\GeneralSettingsController@gallery')->name('general.gallery');
+Route::get('/gallery/delete/{id}', 'Admin\GeneralSettingsController@gallerydelete')->name('gallery.delete');
 Route::get('/general/settings', 'Admin\GeneralSettingsController@settings')->name('general.settings');
 Route::get('/general/slider', 'Admin\GeneralSettingsController@slider')->name('general.slider');
 Route::get('/general/testimonial', 'Admin\GeneralSettingsController@testimonial')->name('general.testimonial');
@@ -46,6 +50,8 @@ Route::post('/settings/store', 'Admin\GeneralSettingsController@settingsStore')-
 Route::post('/slider/store', 'Admin\GeneralSettingsController@sliderStore')->name('slider.store')->middleware('optimizeImages');
 Route::post('/testimonial/store', 'Admin\GeneralSettingsController@testimonialStore')->name('testimonial.store');
 Route::post('/offer/store', 'Admin\GeneralSettingsController@offerStore')->name('offer.store');
+Route::post('/about/store', 'Admin\GeneralSettingsController@aboutStore')->name('about.store');
+Route::post('/gallery/store', 'Admin\GeneralSettingsController@galleryStore')->name('gallery.store');
 
 Route::get('/general/sale/product', 'Admin\GeneralSettingsController@saleproduct')->name('saleproduct');
 Route::post('/sale/product/store', 'Admin\GeneralSettingsController@saleproductstore')->name('saleproduct.store');

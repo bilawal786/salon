@@ -36,7 +36,14 @@
                 <div class="title_holder">
                     <div class="common_name">
                         <h3>{{$product->title}}</h3>
-                        <span>{{$product->category->name}} / {{$product->subcategory->name}}</span>
+                        <span>{{$product->category->name}} / {{$product->subcategory->name}}</span><br>
+                        <span>
+                            @if($product->quantity > 0)
+                                En stock ({{$product->quantity}})
+                            @else
+                                En rupture de stock
+                            @endif
+                        </span>
                     </div>
                     <div class="common_price">
                         <span>@if($product->oldprice)  <del>{{$product->oldprice}} € </del>  @endif    {{$product->price}} €</span>
@@ -47,7 +54,7 @@
                 </div>
                 <div class="makeup_fl_btn">
                     <input type="hidden" name="id" value="{{$product->id}}">
-                    <input type="number" required placeholder="Quantité" name="quantity">
+                    <input type="number" required placeholder="Quantité" min="0" max="{{$product->quantity}}"   @if($product->quantity == 0)  disabled @endif name="quantity">
                     <button type="submit">Ajouter au chariot</button>
                 </div>
                 </form>

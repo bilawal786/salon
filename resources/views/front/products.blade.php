@@ -18,7 +18,12 @@
             <span>Nos produits</span>
         </div>
         <div class="clearfix"></div>
-
+            @foreach($category as $cat)
+            <a href="{{route('front.category', ['id' => $cat->id])}}"><button>{{$cat->name}}</button></a>
+            @endforeach
+        <br>
+        <hr>
+        <br>
         <!-- SERVICES -->
         <div class="makeup_fl_services makeup_fl_masonry">
 

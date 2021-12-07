@@ -157,16 +157,28 @@ $gs = \App\GeneralSettings::find(1);
                                 <p>Témoignage </p>
                             </a>
                         </li>
-                        <li class="nav-item">
+<!--                        <li class="nav-item">
                             <a href="{{route('general.offers')}}" class="nav-link {{  request()->is('general/offers') ? 'active':'' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Des offres </p>
                             </a>
-                        </li>
+                        </li>-->
                         <li class="nav-item">
                             <a href="{{route('saleproduct')}}" class="nav-link {{  request()->is('general/sale/product') ? 'active':'' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p >Produit de vente</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('general.about')}}" class="nav-link {{  request()->is('general/about') ? 'active':'' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p >À propos de nous</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('general.gallery')}}" class="nav-link {{  request()->is('general/gallery') ? 'active':'' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p >Galerie</p>
                             </a>
                         </li>
                     </ul>

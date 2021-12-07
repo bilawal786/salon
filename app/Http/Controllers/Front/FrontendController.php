@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers\Front;
 
+use App\About;
+use App\Category;
 use App\Content;
+use App\Gallery;
 use App\Http\Controllers\Controller;
 use App\Order;
 use App\Product;
@@ -22,14 +25,16 @@ class FrontendController extends Controller
         return view('admin.login');
     }
     public function about(){
-        return view('front.about');
+        $about = About::find(1);
+        return view('front.about', compact('about'));
     }
     public function services(){
         $services = Service::all();
         return view('front.services', compact('services'));
     }
     public function gallery(){
-        return view('front.gallery');
+        $gallery = Gallery::all();
+        return view('front.gallery', compact('gallery'));
     }
     public function blogs(){
         return view('front.blogs');
@@ -47,8 +52,14 @@ class FrontendController extends Controller
         return view('modal.opening');
     }
     public function products(){
+        $category = Category::all();
         $products = Product::all();
-        return view('front.products', compact('products'));
+        return view('front.products', compact('products', 'category'));
+    }
+    public function category($id){
+        $products = Product::where('category_id', $id)->get();
+        $category = Category::all();
+        return view('front.products', compact('products', 'category'));
     }
     public function product($id){
         $product = Product::find($id);
@@ -103,13 +114,13 @@ class FrontendController extends Controller
         $order->order_number = "ON-".rand(100000000, 900000000);
         $order->save();
 
-        /*foreach(json_decode($order->products) as $item){
+        foreach(json_decode($order->products) as $item){
             $product = Product::find($item->id);
             if ($product){
                 $product->quantity = $product->quantity - $item->quantity;
                 $product->update();
             }
-        }*/
+        }
 
         \Cart::clear();
         return view('front.paymentsuccess', compact('order'));

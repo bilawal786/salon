@@ -13,51 +13,13 @@
             </div>
             <div class="clearfix"></div>
             <ul class="makeup_fl_gallery_list gallery makeup_fl_masonry">
+                @foreach($gallery as $gal)
                 <li class="makeup_fl_masonry_in">
-                    <a href="{{asset('front/img/gallery/thumb1.jpg')}}">
-                        <img src="{{asset('front/img/gallery/thumb1.jpg')}}" alt="" />
+                    <a href="{{asset($gal->image)}}">
+                        <img src="{{asset($gal->image)}}" alt="" />
                     </a>
                 </li>
-                <li class="makeup_fl_masonry_in">
-                    <a href="{{asset('front/img/gallery/thumb2.jpg')}}">
-                        <img src="{{asset('front/img/gallery/thumb2.jpg')}}" alt="" />
-                    </a>
-                </li>
-                <li class="makeup_fl_masonry_in">
-                    <a href="{{asset('front/img/gallery/thumb3.jpg')}}">
-                        <img src="{{asset('front/img/gallery/thumb3.jpg')}}" alt="" />
-                    </a>
-                </li>
-                <li class="makeup_fl_masonry_in">
-                    <a href="{{asset('front/img/gallery/thumb4.jpg')}}">
-                        <img src="{{asset('front/img/gallery/thumb4.jpg')}}" alt="" />
-                    </a>
-                </li>
-                <li class="makeup_fl_masonry_in">
-                    <a href="{{asset('front/img/gallery/thumb5.jpg')}}">
-                        <img src="{{asset('front/img/gallery/thumb5.jpg')}}" alt="" />
-                    </a>
-                </li>
-                <li class="makeup_fl_masonry_in">
-                    <a href="{{asset('front/img/gallery/thumb6.jpg')}}">
-                        <img src="{{asset('front/img/gallery/thumb6.jpg')}}" alt="" />
-                    </a>
-                </li>
-                <li class="makeup_fl_masonry_in">
-                    <a href="{{asset('front/img/gallery/thumb7.jpg')}}">
-                        <img src="{{asset('front/img/gallery/thumb7.jpg')}}" alt="" />
-                    </a>
-                </li>
-                <li class="makeup_fl_masonry_in">
-                    <a href="{{asset('front/img/gallery/thumb9.jpg')}}">
-                        <img src="{{asset('front/img/gallery/thumb9.jpg')}}" alt="" />
-                    </a>
-                </li>
-                <li class="makeup_fl_masonry_in">
-                    <a href="{{asset('front/img/gallery/thumb10.jpg')}}">
-                        <img src="{{asset('front/img/gallery/thumb10.jpg')}}" alt="" />
-                    </a>
-                </li>
+                @endforeach
             </ul>
         </div>
         <!-- /COMMMON -->

@@ -95,7 +95,6 @@ $gs = \App\GeneralSettings::find(1);
                                 <li><a href="{{route('front.services')}}"><span>Nos services</span></a></li>
                                 <li><a href="{{route('front.products')}}"><span>Nos produits</span></a></li>
                                 <li><a href="{{route('front.gallery')}}"><span>Galerie</span></a></li>
-                                <li><a href="{{route('front.blogs')}}"><span>Notre blog</span></a></li>
                                 <li><a href="{{route('cartitems')}}"><span>Panier</span></a></li>
                                 @guest
                                     <li><a href="{{route('login')}}"><span>Connexion</span></a></li>
@@ -165,7 +164,6 @@ $gs = \App\GeneralSettings::find(1);
                                 <li><a href="{{route('front.services')}}"><span>Nos services</span></a></li>
                                 <li><a href="{{route('front.products')}}"><span>Nos produits</span></a></li>
                                 <li><a href="{{route('front.gallery')}}"><span>Galerie</span></a></li>
-                                <li><a href="{{route('front.blogs')}}"><span>Notre blog</span></a></li>
                                 <li><a href="{{route('cartitems')}}"><span>Panier</span></a></li>
                                 @guest
                                 <li><a href="{{route('login')}}"><span>Connexion</span></a></li>
