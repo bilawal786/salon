@@ -18,38 +18,38 @@
                 <div class="book_online">
                     <div class="makeup_fl_form">
 
-                        <form action="/" method="post" class="contact_form" id="contact_form">
-
+                        <form action="{{route('contact.submit')}}" method="post" >
+                            @csrf
+                            @if(Session::has('message'))
+                                <div class="empty_notice"><span>Vos coordonnées ont été soumises avec succès</span></div>
+                            @endif
                             <div class="fl-col-6">
                                 <div class="your-name">
                                     <label>Nom<span>*</span></label>
-                                    <input type="text" id="name" placeholder="Nom"/>
+                                    <input type="text" required name="name" placeholder="Nom"/>
                                 </div>
                             </div>
                             <div class="fl-col-6 last">
                                 <div class="your-email">
                                     <label>Email<span>*</span></label>
-                                    <input type="text" id="email" placeholder="Email"/>
+                                    <input type="text" required name="email" placeholder="Email"/>
                                 </div>
                             </div>
                             <div class="fl-col-12">
                                 <div class="your-phone">
-                                    <label>Sujette</label>
-                                    <input type="text" id="subject" placeholder="Sujette"/>
+                                    <label>Titre</label>
+                                    <input type="text" required name="title" placeholder="Titre"/>
                                 </div>
                             </div>
 
                             <div class="clearfix"></div>
                             <div class="your-message">
                                 <label>Message: <span>*</span></label>
-                                <textarea id="message" placeholder="Message" cols="3" rows="15"></textarea>
+                                <textarea required name="message" placeholder="Message" cols="3" rows="15"></textarea>
                             </div>
                             <div class="button">
-                                <input type="button" class="makeup_fl_btn makeup_fl_btn_contactsend" value="Réservation en ligne" />
+                                <input type="submit" class="makeup_fl_btn" value="valider" />
                             </div>
-                            <!-- RETURN MESSAGES -->
-                            <div class="returnmessage" data-success="Votre message a été reçu, nous vous contacterons bientôt."></div>
-                            <div class="empty_notice"><span>Veuillez remplir les champs obligatoires</span></div>
                             <!-- /RETURN MESSAGES -->
                         </form>
                     </div>

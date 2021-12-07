@@ -9,7 +9,7 @@
 
             <div class="makeup_fl_title_holder">
                 <div class="line"></div>
-                <span>À propos de notre salon</span>
+                <span>À PROPOS DE NOUS</span>
             </div>
             <div class="common_img">
                 <img src="{{asset($about->image)}}" alt="" />

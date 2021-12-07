@@ -100,14 +100,14 @@ $gs = \App\GeneralSettings::find(1);
                                     <li><a href="{{route('login')}}"><span>Connexion</span></a></li>
                                 @endguest
                                 @auth
-                                    <li><a href=""><span>{{Auth::user()->fname}} {{Auth::user()->lname}}</span></a></li>
+                                    <li><a href="{{route('user.dashbooard')}}"><span>{{Auth::user()->fname}} {{Auth::user()->lname}}</span></a></li>
                                 @endauth
                             </ul>
                         </div>
                         <div class="makeup_fl_booking_btn">
                             <div class="btn_s_a"><a href="{{route('modal.address')}}" class="ajax-popup-link"><i class="xcon-home"></i></a></div>
-                            <div class="btn_b"><a href="{{route('front.contact')}}" class="ajax-popup-link">Contact</a></div>
-                            <div class="btn_s_b"><a href="{{route('modal.opening')}}" class="ajax-popup-link"><i class="xcon-clock-1"></i></a></div>
+                            <div class="btn_b"><a href="{{route('front.contact')}}">Contact</a></div>
+                            <div class="btn_s_b"><a href="{{route('modal.address')}}" class="ajax-popup-link"><i class="xcon-clock-1"></i></a></div>
                         </div>
                         <div class="makeup_fl_social_icons">
                             <ul>
@@ -169,7 +169,7 @@ $gs = \App\GeneralSettings::find(1);
                                 <li><a href="{{route('login')}}"><span>Connexion</span></a></li>
                                 @endguest
                                 @auth
-                                    <li><a href=""><span>{{Auth::user()->fname}} {{Auth::user()->lname}}</span></a></li>
+                                    <li><a href="{{route('user.dashbooard')}}"><span>{{Auth::user()->fname}} {{Auth::user()->lname}}</span></a></li>
                                 @endauth
                             </ul>
                         </div>

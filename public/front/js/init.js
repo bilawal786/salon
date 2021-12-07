@@ -159,7 +159,7 @@ function makeup_fl_contact_form_contactsend(){
 		}
 		else{
 			// Returns successful data submission message when the entered information is stored in database.
-			jQuery.post("modal/contactsend.php",{ xx_name: name, xx_email: email, xx_message:message, xx_subject: subject}, function(data) {
+			jQuery.post("contact/submit",{ xx_name: name, xx_email: email, xx_message:message, xx_subject: subject}, function(data) {
 
 				jQuery(".contact_form .returnmessage").append(data);//Append returned message to message paragraph
 

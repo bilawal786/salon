@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\About;
+use App\Contact;
 use App\Content;
 use App\Gallery;
 use App\GeneralSettings;
@@ -238,5 +239,9 @@ class GeneralSettingsController extends Controller
             'alert-type' => 'success'
         );
         return redirect()->back()->with($notification);
+    }
+    public function query(){
+        $query = Contact::all();
+        return view('admin.generalsettings.query', compact('query'));
     }
 }

@@ -181,6 +181,12 @@ $gs = \App\GeneralSettings::find(1);
                                 <p >Galerie</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{route('general.query')}}" class="nav-link {{  request()->is('general/query') ? 'active':'' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p >Queries</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
 

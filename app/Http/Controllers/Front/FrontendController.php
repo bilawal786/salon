@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\About;
 use App\Category;
+use App\Contact;
 use App\Content;
 use App\Gallery;
 use App\Http\Controllers\Controller;
@@ -13,7 +14,7 @@ use App\SaleProduct;
 use App\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Session;
 class FrontendController extends Controller
 {
     public function index(){
@@ -124,5 +125,23 @@ class FrontendController extends Controller
 
         \Cart::clear();
         return view('front.paymentsuccess', compact('order'));
+    }
+    public function dashbooard(){
+        $orders = Order::where('user_id', Auth::user()->id)->get();
+        return view('user.dashboard', compact('orders'));
+    }
+    public function orderView($id){
+        $order = Order::where('id', $id)->first();
+        return view('user.orderView', compact('order'));
+    }
+    public function contactSubmit(Request $request){
+        $contact = new Contact();
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->title = $request->title;
+        $contact->message = $request->message;
+        $contact->save();
+        Session::flash('message', 'Ce créneau horaire est réservé à cette date. Vérifiez votre tableau de bord pour la disponibilité des machines à sous!');
+        return redirect()->back();
     }
 }

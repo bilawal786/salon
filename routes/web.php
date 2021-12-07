@@ -23,6 +23,7 @@ Route::get('/blogs','Front\FrontendController@blogs')->name('front.blogs');
 Route::get('/products','Front\FrontendController@products')->name('front.products');
 Route::get('/product/{id}','Front\FrontendController@product')->name('front.product');
 Route::get('/contact','Front\FrontendController@contact')->name('front.contact');
+Route::post('/contact/submit','Front\FrontendController@contactSubmit')->name('contact.submit');
 Route::get('/checkout','Front\FrontendController@checkout')->name('front.checkout')->middleware('auth');
 Route::post('/checkout/submit','Front\FrontendController@checkoutSubmit')->name('checkout.submit')->middleware('auth');
 
@@ -40,6 +41,7 @@ Route::group(['middleware' => ['auth', 'web', 'role']], function() {
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/general/about', 'Admin\GeneralSettingsController@about')->name('general.about');
+Route::get('/general/query', 'Admin\GeneralSettingsController@query')->name('general.query');
 Route::get('/general/gallery', 'Admin\GeneralSettingsController@gallery')->name('general.gallery');
 Route::get('/gallery/delete/{id}', 'Admin\GeneralSettingsController@gallerydelete')->name('gallery.delete');
 Route::get('/general/settings', 'Admin\GeneralSettingsController@settings')->name('general.settings');
@@ -96,3 +98,6 @@ Route::get('/products/delete/{id}', 'Admin\ProductController@delete')->name('pro
     ]);
 
 });
+
+Route::get('/user/dashbooard', 'Front\FrontendController@dashbooard')->name('user.dashbooard');
+Route::get('/user/order/view/{id}', 'Front\FrontendController@orderView')->name('user.order.view');
