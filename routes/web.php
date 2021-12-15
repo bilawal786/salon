@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/admin/login','Front\FrontendController@admin');
-Route::get('/','Front\FrontendController@index')->name('front.index');
+Route::get('/maintain','Front\FrontendController@index')->name('front.index');
+Route::get('/','Front\FrontendController@maintain')->name('front.maintain');
 Route::get('/about','Front\FrontendController@about')->name('front.about');
 Route::get('/services','Front\FrontendController@services')->name('front.services');
 Route::get('/front/gallery','Front\FrontendController@gallery')->name('front.gallery');

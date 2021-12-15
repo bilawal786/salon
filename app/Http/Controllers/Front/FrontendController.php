@@ -25,6 +25,9 @@ class FrontendController extends Controller
     public function admin(){
         return view('admin.login');
     }
+    public function maintain(){
+        return view('maintain');
+    }
     public function about(){
         $about = About::find(1);
         return view('front.about', compact('about'));
