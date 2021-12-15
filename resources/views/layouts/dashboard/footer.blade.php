@@ -1,5 +1,5 @@
  <footer class="main-footer">
-    <strong>Développé par <a href="https://ikaedigital.com/">Spencer Agency</a> 2021
+    <strong>Développé par <a href="http://spenceragency.fr/">Spencer Agency</a> 2021
         </strong>
     <div class="float-right d-none d-sm-inline-block">
         Mentions légales | Termes et conditions

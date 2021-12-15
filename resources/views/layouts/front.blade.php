@@ -117,7 +117,7 @@ $gs = \App\GeneralSettings::find(1);
                             </ul>
                         </div>
                         <div class="makeup_fl_cright">
-                            <span>Droits d'auteur 2021. Conception et développement par <a href="https://ikaedigital.com/">Spencer Agency</a></span>
+                            <span>Droits d'auteur 2021. Conception et développement par <a href="http://spenceragency.fr/">Spencer Agency</a></span>
                         </div>
                         <div class="makeup_fl_totop_wrapper">
                             <div class="rotating"></div>
@@ -190,7 +190,7 @@ $gs = \App\GeneralSettings::find(1);
                             </ul>
                         </div>
                         <div class="cright">
-                            <span>&copy; Droits d'auteur 2021. Conception et développement par <a href="">Spencer Agency</a></span>
+                            <span>&copy; Droits d'auteur 2021. Conception et développement par <a href="http://spenceragency.fr/">Spencer Agency</a></span>
                         </div>
                         <div class="makeup_fl_totop_wrapper">
                             <div class="rotating"></div>
